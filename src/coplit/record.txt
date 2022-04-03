@@ -1,0 +1,11 @@
+총 139문제
+
+1-algorithm-basic : 20문제
+- 다시 풀어볼 문제
+: 13_readVertically
+
+2-higer-order-function : 32문제
+3-recursion : 15문제
+4-algorithm : 9문제
+5-data-structure : 13문제
+6-toy : 50문제
