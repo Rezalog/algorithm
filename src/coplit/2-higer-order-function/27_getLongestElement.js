@@ -25,18 +25,9 @@ console.log(output); // --> 'one'
 // 22/4/5
 function getLongestElement(arr) {
     // TODO: 여기에 코드를 작성합니다.
-    let temp = '';
-
-    arr.reduce((prev,cur)=> {
-        if(prev.length===cur.length) {
-            temp = prev;
-        } else if(prev.length>cur.length) {
-            temp = prev;
-        } else {
-            temp = cur;
-        }
-    })
-    return temp;
+    return arr.reduce((prev,cur) => {
+        return (prev.length>=cur.length) ? prev : cur
+    }, '')
 }
   
 

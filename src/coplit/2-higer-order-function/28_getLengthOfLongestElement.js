@@ -25,9 +25,9 @@ function getLengthOfLongestElement(arr) {
     // 여기에 코드를 입력하세요
     if(arr.length===0) return 0;
 
-    return arr.reduce((prev,cur)=>{
-        // return (prev.length>cur.length) ? prev.length : cur.length
-        ((prev.length>cur.length) ? prev : cur)}).length;
+    return arr.reduce((prev,cur)=>
+        // (prev.length>cur.length) ? prev.length : cur.length
+        ((prev.length>cur.length) ? prev : cur)).length;
 }
 
 

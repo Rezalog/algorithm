@@ -24,10 +24,11 @@ console.log(output); // --> 5
 function computeAverageOfNumbers(arr) {
     // TODO: 여기에 코드를 작성합니다.
     const sum = arr.reduce((prev,cur)=>prev+cur,0)
-    return sum;
+    if(arr.length===0) return 0
+    return sum/arr.length;
 }
   
-console.log(computeAverageOfNumbers([]))
+// console.log(computeAverageOfNumbers([]))
 
 
 // prev)
