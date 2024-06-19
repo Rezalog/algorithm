@@ -1,9 +1,8 @@
 # [C++ 기초]
 
+## 환경설정
 
-[1]환경설정
-
-- Windows
+### Windows
  1. 컴파일러 설치
  -  https://code.visualstudio.com/docs/languages/cpp 에서 컴파일러 mingw64 설치를 위한 msys64 설치
  - minsys 설치 후 popup 되는 터미널에서 
