@@ -15,7 +15,7 @@ int main() { // 함수의 헤더, main 은 운영체제가 가장 먼저 실행�
  * 4. Launch 설정
  * 
  * g++ main.cpp -o Ex01.exe
- * => g++ 컴파일러로 현재 main.cpp 를 Ex01.exe 파일로 만들겠다(exe는 리눅스에서 생략 가능)
+ * => g++ 컴파일러로 현재 main.cpp 를 Ex01.exe 라는 출력 파일 이름으로 지정(exe는 리눅스에서 생략 가능)
  * => Ex01.exe 파일이 생성되면 ./Ex01.exe 명령어로 실행
  * (git bash로 실행시 segmentation fault 발생, PS로 실행)
  * 
