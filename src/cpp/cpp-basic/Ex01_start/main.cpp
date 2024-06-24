@@ -1,14 +1,14 @@
-#include <iostream>     // iostream을 헤더를 포함(include)
+﻿#include <iostream>     // iostream을 헤더를 포함(include)
 
 using namespace std;    // namesapce 설명 std:cout, std:endl
 
 int main() { // 함수의 헤더, main 은 운영체제가 가장 먼저 실행하는 entry point 임을 의미
-    cout << "CPP Basic Learn" << endl; // << 는 stream insert operator
+    cout << "CPP 한글 Learn" << endl; // << 는 stream insert operator
 
     return 0;
 }
 
-/**
+/** 
  * 1. 확장(Extension) 설치
  * 2. C/C++ Edit Configuration 설정
  * 3. Tasks 설정

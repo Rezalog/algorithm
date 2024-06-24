@@ -1,19 +1,24 @@
-#include <iostream> // iostream ÀÌ¶ó´Â Çì´õ¸¦ Æ÷ÇÔ
+#include <iostream> // iostream ì´ë¼ëŠ” í—¤ë”ë¥¼ í¬í•¨
 
-using namespace std; // ³×ÀÓ½ºÆäÀÌ½º ¼³¸í std::cout
+using namespace std; // ë„¤ì„ìŠ¤í˜ì´ìŠ¤ ì„¤ëª… std::cout
 
 int main()
 {
     // cout << "CPP Basic" << endl;
     // printf("printf test string");
-    char user_input[100]; // ¹®ÀÚÀÇ ¹è¿­, Áï ¹®ÀÚ¿­·Î ¹ŞÀ» º¯¼ö¸íÀ» ÁöÁ¤
-    cin >> user_input; // ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­À» string À¸·Î ÀúÀå
-    cout << "out : " << user_input; // ±×´ë·Î Ãâ·Â
+    char user_input[100]; // ë¬¸ìì˜ ë°°ì—´, ì¦‰ ë¬¸ìì—´ë¡œ ë°›ì„ ë³€ìˆ˜ëª…ì„ ì§€ì •
+    cin >> user_input; // ì…ë ¥ë°›ì€ ë¬¸ìì—´ì„ string ìœ¼ë¡œ ì €ì¥
+    // cout << "out : " << user_input; // ê·¸ëŒ€ë¡œ ì¶œë ¥
+    cout << "out : " << user_input;
+    // for(int i=0; i<sizeof(user_input); i++) {
+    //     << " " << i << " => " 
+    //     << user_input[i] << endl;
+    // }
 
     return 0;
 }
 
 /**
- * [C++ ÇÑ±Û ÀÔÃâ·Â ¹æ¹ı]
+ * [C++ í•œê¸€ ì…ì¶œë ¥ ë°©ë²•]
  * 
  */
