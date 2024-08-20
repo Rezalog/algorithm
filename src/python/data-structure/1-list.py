@@ -49,10 +49,31 @@ wrongListCompArr[1][1] = 5
 print(wrongListCompArr) # [[0, 5, 0], [0, 5, 0], [0, 5, 0], [0, 5, 0]] - 같은 객체로 인식되어 잘못됨
 
 """
-list method
+리스트 관련 기타 메서드
+
+    함수명         사용법                      설명                 시간복잡도
+------------------------------------------------------------------------------    
+- append()     arr.append(a)            arr에 오른쪽부터 a 삽입      O(1)
+- sort()       arr.sort()               기본 정렬, 오름차순(퀵)      O(NlogN)
+               arr.sort(reverse=True)   내림차순 정렬               O(NlogN)
+- reverse()    arr.reverse()            list의 원소 순서 다 뒤집음   O(N)
+- insert()     arr.insert(index, a)     arr의 index에 a 삽입        O(N)
+- count()      arr.count(e)             e값을 가지는 arr의 원소 개수 O(N)
+- remove()     arr.remove(e)            e값을 가지는 원소 1개 제거   O(N)                                                    
+
 """ 
 numbers.append(6)
 print(numbers) # append element to last index, [1, 2, 3, 4, 5, 6]
 numbers.remove(3)
 print(numbers) # remove element of same element string name parameter, [1, 2, 4, 5, 6]
 # numbers.remove(0) # error
+
+# 리스트에서 특정 값을 가지는 원소를 모두 제거하기
+removeAllArr = [1,2,3,4,5,5,5]
+remove_set = {3,5} # 집합 자료형, 특정 원소의 존재 유무 만을 체크하고자 사용
+
+_result = [i for i in removeAllArr ]
+print(_result) # [1, 2, 3, 4, 5, 5, 5]
+result = [i for i in removeAllArr if i not in remove_set] 
+#-- 해석 : removeAllArr 원소 중(i) remove_set에 포함되지 않은 원소들만 result에 배열로 초기화하겠다.
+print(result) # [1, 2, 4]
