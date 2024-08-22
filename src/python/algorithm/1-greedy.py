@@ -30,9 +30,39 @@ print(count) # 6
 입력 예)                출력 예)
 25 5                    2
 """
+# 내 풀이
+n, k = list(map(int, input().split()))
+count = 0
 
 
+while(True):
+    if(n%k==0): 
+        n //= k
+        count += 1
+    else:
+        n -= 1
+        count += 1
+    if(n==1): break
 
+print(count)
+
+# 답안
+n, k = map(int, input().split()) # list 로 바꿀 필요 없다
+result = 0
+
+while True:
+    # N이 K로 나누어 떨어지는 수가 될 때까지 뺴기
+    target = (n // k) * k
+    result += (n - target)
+    n = target
+    # N이 K보다 작을 때(더이상 나눌 수 없을 때) 반복문 탈출
+    if n < k: break
+    # K로 나누기
+    result += 1
+    n //= k
+
+result += (n-1)
+print(result)
 
 """
 3) 큰 수의 법칙
