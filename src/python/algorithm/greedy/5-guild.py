@@ -21,23 +21,43 @@
 """
 오름차순으로 해야 가장 최대의 그룹을 만들 수 있다.
 """
-n = int(input())
-data = list(map(int, input().split()))
+# n = int(input())
+# data = list(map(int, input().split()))
 
-group = 0
+# group = 0
 
 # 내림차순으로 정렬 후 가장 큰 수만큼 배열을 지우고(slicing) 그룹수를 1 올린다.
 # 그리고 남은 배열에서도 가장 큰 수를 찾고 배열을 slicing 후 그룹수를 올린다.
 # 마지막으로 가장 큰 수가 배열의 길이보다 크면 그룹수를 반환한다.
 
-data.sort(reverse=True)
+# data.sort(reverse=True)
 
-while(True):
-    max = data[0]
-    print(max, data)
-    if max > len(data): break
-    data = data[0:max-1]
-    group += 1
+# while(True):
+#     max = data[0]
+#     print(max, data)
+#     if max > len(data): break
+#     data = data[0:max-1]
+#     group += 1
     
-print(group)
+# print(group)
 
+"""
+답안
+: 오름차순으로 정렬하고 공포도가 낮은 순의 배열에 접근하면서
+현재 그룹에 포함된 모험가의 수를 더하고 초기화하면서 그룹 체결 시 그룹 수에 더해준다.  
+"""
+
+n = int(input()) # 모험가의 수
+data = list(map(int, input().split()))
+result = 0 # 체결 그룹 수
+count = 0 # 현재 그룹에 포함된 모험가의 수
+
+data.sort() # 오름차순 정렬
+
+for i in data:
+    count += 1 # 모험가의 수 1명 더함(현재 그룹에 포함시킴)
+    if count >= i: 
+        result += 1 # 만약 현재 그룹이 현재 모험가의 공포도보다 크면(포함시킬 수 있다면) 그룹 체결
+        count = 0 # 그룹 체결되었으므로 현재 그룹 모험가의 수 초기화
+    
+print(result)
