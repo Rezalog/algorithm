@@ -31,11 +31,11 @@ for plan in plans:
         if move_types[i] == plan:
             nx = x + dx[i]
             ny = y + dy[i]
-            # 이동한 위치가 MATRIX 밖일 경우 무시
-            if nx < 1 or ny < 1 or nx > n or ny > n:
-                continue
-            # 이동 수행
-            x, y = nx, ny
+    # 이동한 위치가 MATRIX 밖일 경우 무시
+    if nx < 1 or ny < 1 or nx > n or ny > n:
+        continue
+    # 이동
+    x, y = nx, ny
 
 print(x,y)
 
