@@ -38,3 +38,31 @@ for literal in data:
     
 result += str(num)
 print(result)
+
+"""
+답안
+
+- 알파벳, 숫자를 따로 구분하고 result에 append 하는 방식으로 처리
+- str.isalpha() 메서드 활용
+"""
+
+data = input()
+result = []
+value = 0
+
+# 문자 하나씩 확인하며
+for x in data:
+    if x.isalpha():
+        result.append(x) # 알파벳은 result 배열에
+    else: 
+        value += int(x) # 숫자는 value에 더함
+        
+# 알파벳 오름차순 정렬(알파벳 처리 끝)
+result.sort()
+
+# 숫자가 하나라도 있으면 가장 뒤에 삽입
+if value != 0:
+    result.append(str(value))
+
+# 최종 결과 출력(list -> str)
+print(''.join(result))
